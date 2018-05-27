@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../PreProcessor/cor/functions.h
+
+../PreProcessor/include/preproc_minilib.h
+libstring_print.h
+../PreProcessor/include/libstring_print.h
+
+../PreProcessor/lib/libstring_print.h
+unistd.h
+-
+stdlib.h
+-
+stdio.h
+-
+functions.h
+../PreProcessor/lib/functions.h
+
+/home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c
+preproc_minilib.h
+/home/lucasg/CLionProjects/minilibc/PreProcessor/preproc_minilib.h
+
