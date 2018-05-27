@@ -24,12 +24,10 @@ PREPROC_FUNCTION_PRM2(char *, pp_strcpy, src, char *, dest, char *)
     int     i = 0;
     while (*src) {
         POINT_OFFSET_PTR(dest, i, src)
-	//*(dest + i) = *src;
 	src++;
 	i++;
     }
     POINT_OFFSET_VAL(dest, i, '\0')
-    //*(dest + i) = '\0';
     RETURN(dest);
 }
 
@@ -48,12 +46,10 @@ PREPROC_FUNCTION_PRM2(char *, pp_strcat, dest, char *, src, char *)
 
     while (*src) {
         POINT_OFFSET_PTR(dest, (destlen + i), src)
-	//*(dest + (destlen + i)) = *src;
 	src++;
 	i++;
     }
     POINT_OFFSET_VAL(dest, (destlen + i), '\0')
-    //*(dest + (destlen + i)) = '\0';
     RETURN(dest);
 }
 
