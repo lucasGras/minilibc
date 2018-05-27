@@ -5,15 +5,14 @@
 #ifndef MINILIBC_PREPROC_MINILIB_H
 #define MINILIBC_PREPROC_MINILIB_H
 
-#include "libstring_print.h"
+#include "libstring.h"
 
 PREPROC_MAIN(int, main)
 {
-    char test[] = "test";
-    EXEC_FUNC(pp_putc, 'c');
-    EXEC_FUNC(pp_putstr, test);
-    printf("\n%s\n", EXEC_FUNC(pp_strdup, "is_duped"));
-    printf("%d\n", EXEC_FUNC(pp_strlen, "test"));
+    char *dup = EXEC_FUNC(pp_strdup, "is_duped");
+
+    printf("%s\n", dup);
+    MEM_FREE(dup);
     RETURN(0);
 }
 

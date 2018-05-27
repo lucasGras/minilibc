@@ -8,11 +8,13 @@
 
 ../PreProcessor/cor/functions.h
 
-../PreProcessor/include/preproc_minilib.h
-libstring_print.h
-../PreProcessor/include/libstring_print.h
+../PreProcessor/cor/memory.h
 
-../PreProcessor/lib/libstring_print.h
+../PreProcessor/include/preproc_minilib.h
+libstring.h
+../PreProcessor/include/libstring.h
+
+../PreProcessor/lib/libstring.h
 unistd.h
 -
 stdlib.h
@@ -21,6 +23,16 @@ stdio.h
 -
 functions.h
 ../PreProcessor/lib/functions.h
+memory.h
+../PreProcessor/lib/memory.h
+libstring_utils.h
+../PreProcessor/lib/libstring_utils.h
+libstring_print.h
+../PreProcessor/lib/libstring_print.h
+
+../PreProcessor/lib/libstring_print.h
+
+../PreProcessor/lib/libstring_utils.h
 
 /home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c
 preproc_minilib.h

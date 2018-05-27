@@ -83,7 +83,7 @@
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor/functions.h">
 			<Option target="minilibc"/>
 		</Unit>
-		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor/memsize.h">
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor/memory.h">
 			<Option target="minilibc"/>
 		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c">
@@ -92,7 +92,13 @@
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/include/preproc_minilib.h">
 			<Option target="minilibc"/>
 		</Unit>
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib/libstring.h">
+			<Option target="minilibc"/>
+		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib/libstring_print.h">
+			<Option target="minilibc"/>
+		</Unit>
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib/libstring_utils.h">
 			<Option target="minilibc"/>
 		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/CMakeLists.txt">

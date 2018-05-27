@@ -3,6 +3,9 @@
 
 CMakeFiles/minilibc.dir/PreProcessor/demo.c.o
  ../PreProcessor/cor/functions.h
+ ../PreProcessor/cor/memory.h
  ../PreProcessor/include/preproc_minilib.h
+ ../PreProcessor/lib/libstring.h
  ../PreProcessor/lib/libstring_print.h
+ ../PreProcessor/lib/libstring_utils.h
  /home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c
