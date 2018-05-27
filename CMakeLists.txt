@@ -11,4 +11,4 @@ add_executable(minilibc
         PreProcessor/demo.c
         PreProcessor/lib/libstring_print.h
         PreProcessor/cor/functions.h
-        PreProcessor/include/preproc_minilib.h)
+        PreProcessor/include/preproc_minilib.h PreProcessor/cor/memsize.h)

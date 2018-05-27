@@ -83,6 +83,9 @@
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor/functions.h">
 			<Option target="minilibc"/>
 		</Unit>
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor/memsize.h">
+			<Option target="minilibc"/>
+		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c">
 			<Option target="minilibc"/>
 		</Unit>

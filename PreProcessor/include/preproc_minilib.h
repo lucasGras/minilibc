@@ -9,8 +9,10 @@
 
 PREPROC_MAIN(int, main)
 {
-    EXEC_FUNC(pp_putchar, 'c');
-    EXEC_FUNC(pp_putstr, "test");
+    char test[] = "test";
+    EXEC_FUNC(pp_putc, 'c');
+    EXEC_FUNC(pp_putstr, test);
+    printf("\n%s\n", EXEC_FUNC(pp_strdup, "is_duped"));
     printf("%d\n", EXEC_FUNC(pp_strlen, "test"));
     RETURN(0);
 }
