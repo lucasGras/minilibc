@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include "functions.h"
 
-PREPROC_FUNCTION(int, pp_putchar, c, char)
+PREPROC_FUNCTION(int, pp_putc, c, char)
 {
     EXEC_SYS(write(1, &c, 1), -1);
     RETURN(0);
@@ -23,6 +23,7 @@ PREPROC_FUNCTION(void, pp_putstr, str, char *)
         str++;
     }
 }
+
 
 PREPROC_FUNCTION(size_t, pp_strlen, str, char *)
 {
