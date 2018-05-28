@@ -1,4 +1,6 @@
 /home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/lucasg/CLionProjects/minilibc
+-- The ASM_NASM compiler identification is NASM
+-- Found assembler: /usr/bin/nasm
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/lucasg/CLionProjects/minilibc/cmake-build-debug

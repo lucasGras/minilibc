@@ -15,3 +15,5 @@
 - `char     *pp_strcat(char *src, char *dest)`
 - `int      pp_strcmp(char *str, char *str1)`
 - `int      pp_atoi(char *str)`
+- `int      pp_digitlen(int)`
+- `char     *pp_int_to_str(int)`

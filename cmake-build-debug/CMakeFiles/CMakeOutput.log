@@ -189,3 +189,5 @@ gmake[1]: Leaving directory '/home/lucasg/CLionProjects/minilibc/cmake-build-deb
     Feature record: C_FEATURE:0c_restrict
     Feature record: C_FEATURE:0c_static_assert
     Feature record: C_FEATURE:0c_variadic_macros
+Checking whether the ASM_NASM compiler is NASM using "-v" matched "(NASM version)":
+NASM version 2.13.01 compiled on Jul 26 2017

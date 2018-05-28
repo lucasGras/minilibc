@@ -17,6 +17,24 @@
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
+//NASM compiler
+CMAKE_ASM_NASM_COMPILER:FILEPATH=/usr/bin/nasm
+
+//Flags used by the assembler during all build types.
+CMAKE_ASM_NASM_FLAGS:STRING=
+
+//Flags used by the assembler during debug builds.
+CMAKE_ASM_NASM_FLAGS_DEBUG:STRING=
+
+//Flags used by the assembler during release minsize builds.
+CMAKE_ASM_NASM_FLAGS_MINSIZEREL:STRING=
+
+//Flags used by the assembler during release builds.
+CMAKE_ASM_NASM_FLAGS_RELEASE:STRING=
+
+//Flags used by the assembler during Release with Debug Info builds.
+CMAKE_ASM_NASM_FLAGS_RELWITHDEBINFO:STRING=
+
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
 CMAKE_BUILD_TYPE:STRING=Debug
@@ -192,6 +210,19 @@ untitled1_SOURCE_DIR:STATIC=/home/lucasg/CLionProjects/minilibc
 
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_NASM_COMPILER
+CMAKE_ASM_NASM_COMPILER-ADVANCED:INTERNAL=1
+CMAKE_ASM_NASM_COMPILER_WORKS:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_NASM_FLAGS
+CMAKE_ASM_NASM_FLAGS-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_NASM_FLAGS_DEBUG
+CMAKE_ASM_NASM_FLAGS_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_NASM_FLAGS_MINSIZEREL
+CMAKE_ASM_NASM_FLAGS_MINSIZEREL-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_NASM_FLAGS_RELEASE
+CMAKE_ASM_NASM_FLAGS_RELEASE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_ASM_NASM_FLAGS_RELWITHDEBINFO
+CMAKE_ASM_NASM_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
 CMAKE_CACHEFILE_DIR:INTERNAL=/home/lucasg/CLionProjects/minilibc/cmake-build-debug
 //Major version of cmake used to create the current loaded cache
