@@ -72,6 +72,17 @@ PREPROC_FUNCTION_PRM2(int, pp_strcmp, str, char *, str1, char *)
     RETURN((int)str - (int)str1 - 1);
 }
 
+PREPROC_FUNCTION(char *, pp_revstr, str, char *)
+{
+    char rev[EXEC_FUNC(pp_strlen, str) + 1];
+
+    for (int i = 0; str && str[i]; i++)
+        rev[i] = str[EXEC_FUNC(pp_strlen, str) - i - 1];
+    for (int i = 0; str && i < EXEC_FUNC(pp_strlen, str); i++)
+        str[i] = rev[i];
+    RETURN(str);
+}
+
 #include "libstring_print.h"
 #include "libstring_utils.h"
 

@@ -27,4 +27,34 @@ PREPROC_FUNCTION(int, pp_atoi, str, char *)
     RETURN(get);
 }
 
+PREPROC_FUNCTION(int, pp_digitlen, nb, int)
+{
+    int i = 0;
+    while (nb != 0) {
+        nb /= 10;
+        i++;
+    }
+    RETURN(++i);
+}
+
+PREPROC_FUNCTION(char *, pp_int_to_str, nb, int)
+{
+    char *str = MEM_ALLOC(char, (EXEC_FUNC(pp_digitlen, nb) + 1));
+    int  i = 0;
+    if (nb < 0)
+        nb *= -1;
+    if (nb == 0) {
+	POINT_OFFSET_VAL(str, i, '0');
+	str++;
+    }
+    while (nb != 0) {
+        *str = (char) ((nb % 10) + '0');
+        nb /= 10;
+    	str++;
+    }
+    *str = '\0';
+    str = EXEC_FUNC(pp_revstr, str);
+    RETURN(str);
+}
+
 #endif //MINILIBC_LIBSTRING_UTILS_H
