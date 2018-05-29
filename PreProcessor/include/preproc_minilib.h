@@ -6,14 +6,11 @@
 #define MINILIBC_PREPROC_MINILIB_H
 
 #include "libstring.h"
+#include "preproc_minilibc_test.h"
 
 PREPROC_MAIN(int, main)
 {
-    char *dup = EXEC_FUNC(pp_strdup, "is_duped");
-
-    printf("%s\n", dup);
-    MEM_FREE(dup);
-    RETURN(0);
+    RETURN(EXEC_FUNC_PRM2(tests, ac, av));
 }
 
 #endif //MINILIBC_PREPROC_MINILIB_H

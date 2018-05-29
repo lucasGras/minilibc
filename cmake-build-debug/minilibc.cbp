@@ -92,6 +92,9 @@
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/include/preproc_minilib.h">
 			<Option target="minilibc"/>
 		</Unit>
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/include/preproc_minilibc_test.h">
+			<Option target="minilibc"/>
+		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib/libstring.h">
 			<Option target="minilibc"/>
 		</Unit>

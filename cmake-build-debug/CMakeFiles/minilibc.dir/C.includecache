@@ -13,6 +13,10 @@
 ../PreProcessor/include/preproc_minilib.h
 libstring.h
 ../PreProcessor/include/libstring.h
+preproc_minilibc_test.h
+../PreProcessor/include/preproc_minilibc_test.h
+
+../PreProcessor/include/preproc_minilibc_test.h
 
 ../PreProcessor/lib/libstring.h
 unistd.h

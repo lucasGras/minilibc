@@ -7,25 +7,16 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeASMCompiler.cmake.in"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeASMInformation.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeASM_NASMInformation.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeCompilerIdDetection.cmake"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeDetermineASMCompiler.cmake"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeDetermineASM_NASMCompiler.cmake"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeDetermineCompiler.cmake"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeDetermineCompilerId.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeFindCodeBlocks.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeGenericSystem.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeTestASMCompiler.cmake"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeTestASM_NASMCompiler.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/Compiler/GNU-C.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/Compiler/GNU.cmake"
@@ -48,7 +39,6 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/3.10.3/CMakeASM_NASMCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

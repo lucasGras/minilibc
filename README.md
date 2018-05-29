@@ -4,7 +4,7 @@
 
 
 
-> main is in the demo.c file in PreProcessor directory
+> main in preproc_minilib.h and tests in preproc_minilib_test.h
 
 
 - `int      pp_putc(char c)`

@@ -4,6 +4,7 @@
 CMakeFiles/minilibc.dir/PreProcessor/demo.c.o: ../PreProcessor/cor/functions.h
 CMakeFiles/minilibc.dir/PreProcessor/demo.c.o: ../PreProcessor/cor/memory.h
 CMakeFiles/minilibc.dir/PreProcessor/demo.c.o: ../PreProcessor/include/preproc_minilib.h
+CMakeFiles/minilibc.dir/PreProcessor/demo.c.o: ../PreProcessor/include/preproc_minilibc_test.h
 CMakeFiles/minilibc.dir/PreProcessor/demo.c.o: ../PreProcessor/lib/libstring.h
 CMakeFiles/minilibc.dir/PreProcessor/demo.c.o: ../PreProcessor/lib/libstring_print.h
 CMakeFiles/minilibc.dir/PreProcessor/demo.c.o: ../PreProcessor/lib/libstring_utils.h
