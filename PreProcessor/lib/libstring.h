@@ -85,7 +85,7 @@ PREPROC_FUNCTION(char *, pp_revstr, str, char *)
 
 PREPROC_FUNCTION(int, pp_strtok, str, char *)
 {
-    char	*array = MEM_ALLOC(char *, );
+    //char	*array = MEM_ALLOC(char *, );
 }
 
 #include "libstring_print.h"

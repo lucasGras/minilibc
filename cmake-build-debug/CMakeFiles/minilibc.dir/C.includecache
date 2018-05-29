@@ -25,10 +25,10 @@ functions.h
 ../PreProcessor/lib/functions.h
 memory.h
 ../PreProcessor/lib/memory.h
-libstring_utils.h
-../PreProcessor/lib/libstring_utils.h
 libstring_print.h
 ../PreProcessor/lib/libstring_print.h
+libstring_utils.h
+../PreProcessor/lib/libstring_utils.h
 
 ../PreProcessor/lib/libstring_print.h
 

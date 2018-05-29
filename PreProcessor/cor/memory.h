@@ -7,7 +7,7 @@
 
 /* ALLOCATION */
 #define MEM_ALLOC(type, size) malloc(sizeof(type) * (size))
-#define MEM_PROTECT_ALLOC(ptr, critical) if (!(ptr)) {RETURN(critical);};)
+#define MEM_PROTECT_ALLOC(ptr, critical) if (!(ptr)) {RETURN(critical);};
 
 #define MEM_FREE(ptr) free(ptr)
 #define MEM_FREE_ARRAY(array) for (int i = 0; array && array[i]; i++) {MEM_FREE(array[i]);};
