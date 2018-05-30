@@ -4,4 +4,10 @@ language: c
 group: stable
 os: linux
 notifications:
-  email: false  
+  email: false
+
+script:
+  -mkdir build
+  -cd build ; cmake ..
+  -make
+  
