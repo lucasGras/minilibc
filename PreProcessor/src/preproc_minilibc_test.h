@@ -6,7 +6,6 @@
 #define MINILIBC_PREPROC_MINILIBC_TEST_H
 
 #define TEST_USAGE "____________________TESTS_RUNNING____________________\n"
-#define EOT "\n____________________END_OF_TESTS____________________"
 
 PREPROC_FUNCTION_VOID(void, tests_putc)
 {
@@ -27,7 +26,7 @@ PREPROC_FUNCTION_VOID(void, tests_strlen)
 
 PREPROC_FUNCTION_VOID(void, tests_strcpy)
 {
-    char    test[10];
+    char    test[20];
     char    *res = EXEC_FUNC_PRM2(pp_strcpy, "test strcpy", test);
     printf("strcpy=%s\n", res);
 }
@@ -47,7 +46,6 @@ PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
     EXEC_FUNC_VOID(tests_strlen);
     EXEC_FUNC_VOID(tests_strcpy);
     EXEC_FUNC_VOID(tests_strdup);
-    write(1, EOT, 53);
     RETURN(1);
 }
 

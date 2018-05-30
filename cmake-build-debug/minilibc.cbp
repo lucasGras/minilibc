@@ -44,7 +44,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/include"/>
+					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/src"/>
 					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor"/>
 					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
@@ -65,7 +65,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/include"/>
+					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/src"/>
 					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor"/>
 					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
@@ -89,12 +89,6 @@
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c">
 			<Option target="minilibc"/>
 		</Unit>
-		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/include/preproc_minilib.h">
-			<Option target="minilibc"/>
-		</Unit>
-		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/include/preproc_minilibc_test.h">
-			<Option target="minilibc"/>
-		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib/libstring.h">
 			<Option target="minilibc"/>
 		</Unit>
@@ -102,6 +96,12 @@
 			<Option target="minilibc"/>
 		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib/libstring_utils.h">
+			<Option target="minilibc"/>
+		</Unit>
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/preproc_minilib.h">
+			<Option target="minilibc"/>
+		</Unit>
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/preproc_minilibc_test.h">
 			<Option target="minilibc"/>
 		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/CMakeLists.txt">

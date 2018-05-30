@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/lucasg/CLionProjects/minilibc/PreProcessor/include -I/home/lucasg/CLionProjects/minilibc/PreProcessor/cor -I/home/lucasg/CLionProjects/minilibc/PreProcessor/lib 
+C_INCLUDES = -I/home/lucasg/CLionProjects/minilibc/PreProcessor/src -I/home/lucasg/CLionProjects/minilibc/PreProcessor/cor -I/home/lucasg/CLionProjects/minilibc/PreProcessor/lib 
 
