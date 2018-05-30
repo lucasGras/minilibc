@@ -1,7 +1,7 @@
 BITS 64
 
 SECTION .text
-GLOBAL asm_putc
+GLOBAL asm_strlen
 
 asm_strlen:
     push    rbp
