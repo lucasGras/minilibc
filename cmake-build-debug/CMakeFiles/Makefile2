@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/lucasg/CLionProjects/minilibc/cmake-build-debug
 CMakeFiles/minilibc.dir/all:
 	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/depend
 	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target minilibc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target minilibc"
 .PHONY : CMakeFiles/minilibc.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/minilibc.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/minilibc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/minilibc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/minilibc.dir/rule

@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/Assembly/asm_tester.c">
+			<Option target="minilibc"/>
+		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/cor/functions.h">
 			<Option target="minilibc"/>
 		</Unit>

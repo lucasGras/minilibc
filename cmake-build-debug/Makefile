@@ -123,6 +123,33 @@ minilibc/fast:
 	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/build
 .PHONY : minilibc/fast
 
+Assembly/asm_tester.o: Assembly/asm_tester.c.o
+
+.PHONY : Assembly/asm_tester.o
+
+# target to build an object file
+Assembly/asm_tester.c.o:
+	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/Assembly/asm_tester.c.o
+.PHONY : Assembly/asm_tester.c.o
+
+Assembly/asm_tester.i: Assembly/asm_tester.c.i
+
+.PHONY : Assembly/asm_tester.i
+
+# target to preprocess a source file
+Assembly/asm_tester.c.i:
+	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/Assembly/asm_tester.c.i
+.PHONY : Assembly/asm_tester.c.i
+
+Assembly/asm_tester.s: Assembly/asm_tester.c.s
+
+.PHONY : Assembly/asm_tester.s
+
+# target to generate assembly for a file
+Assembly/asm_tester.c.s:
+	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/Assembly/asm_tester.c.s
+.PHONY : Assembly/asm_tester.c.s
+
 PreProcessor/src/demo.o: PreProcessor/src/demo.c.o
 
 .PHONY : PreProcessor/src/demo.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... minilibc"
+	@echo "... Assembly/asm_tester.o"
+	@echo "... Assembly/asm_tester.i"
+	@echo "... Assembly/asm_tester.s"
 	@echo "... PreProcessor/src/demo.o"
 	@echo "... PreProcessor/src/demo.i"
 	@echo "... PreProcessor/src/demo.s"

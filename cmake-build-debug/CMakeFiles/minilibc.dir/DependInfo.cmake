@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/lucasg/CLionProjects/minilibc/Assembly/asm_tester.c" "/home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles/minilibc.dir/Assembly/asm_tester.c.o"
   "/home/lucasg/CLionProjects/minilibc/PreProcessor/src/demo.c" "/home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

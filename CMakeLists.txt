@@ -13,4 +13,4 @@ add_executable(minilibc
         PreProcessor/src/preproc_minilib.h
         PreProcessor/src/cor/memory.h
         PreProcessor/src/prep_lib/libstring.h
-        PreProcessor/src/prep_lib/libstring_utils.h PreProcessor/src/preproc_minilibc_test.h)
+        PreProcessor/src/prep_lib/libstring_utils.h PreProcessor/src/preproc_minilibc_test.h Assembly/asm_tester.c)
