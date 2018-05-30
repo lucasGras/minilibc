@@ -51,6 +51,15 @@ PREPROC_FUNCTION_VOID(void, tests_index)
     printf("%s\n", EXEC_FUNC_PRM2(pp_index, index, (int)'a'));
 }
 
+PREPROC_FUNCTION_VOID(void, tests_strcmp)
+{
+    char    str[] = "This is a test";
+    char    str1[] = "This is a test";
+    char    str2[] = "This is e test";
+    printf("%d %d\n", EXEC_FUNC_PRM2(pp_strcmp, str, str1),
+           EXEC_FUNC_PRM2(pp_strcmp ,str, str2));
+}
+
 PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
 {
     write(1, TEST_USAGE, 54);
@@ -61,6 +70,7 @@ PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
     EXEC_FUNC_VOID(tests_strdup);
     EXEC_FUNC_VOID(tests_strcat);
     EXEC_FUNC_VOID(tests_index);
+    EXEC_FUNC_VOID(tests_strcmp);
     RETURN(1);
 }
 

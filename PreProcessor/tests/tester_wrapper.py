@@ -9,11 +9,12 @@ test_debug = lambda stream, expected: DEBUG_SUCCESS if (stream == expected) else
 
 def list_debug():
     list = ["t\n", "This is a test\n", "strlen=12\n", "strcpy=test strcpy\n",
-            "is_duped\n", "This is a test\n", "a test\n"]
+            "is_duped\n", "This is a test\n", "a test\n", "0 1\n"]
     return list
 
 def func_list():
-    list = ["putc", "putstr", "strlen", "strcpy", "strdup", "strcat", "index"]
+    list = ["putc", "putstr", "strlen", "strcpy", "strdup", "strcat", "index",
+                "strcmp"]
     return list
 
 def test(stream, expected):

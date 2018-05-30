@@ -81,9 +81,13 @@ PREPROC_FUNCTION_PRM2(int, pp_strcmp, str, char *, str1, char *)
 {
     if (!str || !str1)
 	RETURN(-1);
-    while (*str == *str1 && *str)
+    while (*str == *str1) {
+        if (!(*str) || !(*str1))
+	    break;
 	str++;
-    RETURN((int)str - (int)str1 - 1);
+	str1++;
+    }
+    RETURN((!(*str) && !(*str1)) ? 0 : 1);
 }
 
 PREPROC_FUNCTION(char *, pp_revstr, str, char *)
