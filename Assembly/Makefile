@@ -1,23 +1,21 @@
-NAME	=	nasm.so
+CC      =       gcc
 
-SRC	=	srcs/strlen.S
+NASM	=	nasm -f elf64
 
-OBJ	=	$(SRC:.S=.o)
+RM      =       rm -f
 
-all:	$(NAME)
+NAME	=	asm
 
-%.o: %.S
-	nasm -o $@ $< -f elf64
-
-$(NAME): $(OBJ)
-	gcc -shared -static-libgcc -nostdlib -fno-builtin -o $(NAME) $(OBJ)
+all:
+	$(NASM) srcs/strlen.S
+	gcc -o $(NAME) asm_tester.c srcs/*.o
 
 clean:
-	rm -f $(OBJ)
+	$(RM) *.o
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
 
-re:	fclean all
+re:     fclean all
 
-.PHONY: all clean fclean re
+.PHONY:         clean fclean all re
