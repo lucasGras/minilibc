@@ -92,13 +92,19 @@ PREPROC_FUNCTION_PRM2(int, pp_strcmp, str, char *, str1, char *)
 
 PREPROC_FUNCTION(char *, pp_revstr, str, char *)
 {
-    char rev[EXEC_FUNC(pp_strlen, str) + 1];
+    char	*rev = MEM_ALLOC(char, EXEC_FUNC(pp_strlen, str) + 1);
+    size_t	i = EXEC_FUNC(pp_strlen, str) - 1;
+    int		offset = 0;
 
-    for (int i = 0; str && str[i]; i++)
-        rev[i] = str[EXEC_FUNC(pp_strlen, str) - i - 1];
-    for (int i = 0; str && i < EXEC_FUNC(pp_strlen, str); i++)
-        str[i] = rev[i];
-    RETURN(str);
+    for (; i >= 0 ; i--) {
+	rev[offset] = str[i];
+	printf("%c\n", rev[offset]);
+	offset++;
+    }
+    rev[offset] = '\0';
+    printf("%s\n", rev);
+    printf("return\n");
+    RETURN(rev);
 }
 
 PREPROC_FUNCTION(int, pp_strtok, str, char *)

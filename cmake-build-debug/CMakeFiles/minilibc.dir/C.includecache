@@ -37,6 +37,8 @@ preproc_minilibc_test.h
 ../PreProcessor/src/preproc_minilibc_test.h
 
 ../PreProcessor/src/preproc_minilibc_test.h
+string.h
+-
 
 /home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c
 preproc_minilib.h

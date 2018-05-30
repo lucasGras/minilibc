@@ -5,6 +5,8 @@
 #ifndef MINILIBC_PREPROC_MINILIBC_TEST_H
 #define MINILIBC_PREPROC_MINILIBC_TEST_H
 
+#include <string.h>
+
 #define TEST_USAGE "____________________TESTS_RUNNING____________________\n"
 
 PREPROC_FUNCTION_VOID(void, tests_putc)
@@ -43,6 +45,7 @@ PREPROC_FUNCTION_VOID(void, tests_strcat)
     char	src[] = "This";
     char	dest[] = " is a test";
     printf("%s\n", EXEC_FUNC_PRM2(pp_memstrcat, src, dest));
+    //TODO free strcat
 }
 
 PREPROC_FUNCTION_VOID(void, tests_index)
@@ -60,6 +63,12 @@ PREPROC_FUNCTION_VOID(void, tests_strcmp)
            EXEC_FUNC_PRM2(pp_strcmp ,str, str2));
 }
 
+PREPROC_FUNCTION_VOID(void, tests_revstr)
+{
+    char    *rev = EXEC_FUNC(pp_revstr, "This is a test");
+    printf("%s\n", rev);
+}
+
 PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
 {
     write(1, TEST_USAGE, 54);
@@ -71,6 +80,7 @@ PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
     EXEC_FUNC_VOID(tests_strcat);
     EXEC_FUNC_VOID(tests_index);
     EXEC_FUNC_VOID(tests_strcmp);
+    EXEC_FUNC_VOID(tests_revstr);
     RETURN(1);
 }
 
