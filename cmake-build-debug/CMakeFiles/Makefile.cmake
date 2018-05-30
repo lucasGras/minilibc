@@ -7,8 +7,6 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeASMInformation.cmake"
-  "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeASM_NASMInformation.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeCInformation.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake"
@@ -26,7 +24,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/Platform/UnixPaths.cmake"
   "/home/lucasg/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/share/cmake-3.10/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
-  "CMakeFiles/3.10.3/CMakeASM_NASMCompiler.cmake"
   "CMakeFiles/3.10.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.3/CMakeSystem.cmake"
   )
