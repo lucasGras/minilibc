@@ -23,7 +23,7 @@ PREPROC_FUNCTION_VOID(void, tests_putstr)
 PREPROC_FUNCTION_VOID(void, tests_strlen)
 {
     size_t  ret = EXEC_FUNC(pp_strlen, "Len of this\n"); //12
-    printf("strlen=%d\n", ret);
+    printf("strlen=%d\n", (int)ret);
 }
 
 PREPROC_FUNCTION_VOID(void, tests_strcpy)
