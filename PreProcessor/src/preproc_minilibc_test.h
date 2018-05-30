@@ -47,7 +47,8 @@ PREPROC_FUNCTION_VOID(void, tests_strcat)
 
 PREPROC_FUNCTION_VOID(void, tests_index)
 {
-    
+    char    index[] = "This is a test";
+    printf("%s\n", EXEC_FUNC_PRM2(pp_index, index, (int)'a'));
 }
 
 PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
@@ -59,7 +60,7 @@ PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
     EXEC_FUNC_VOID(tests_strcpy);
     EXEC_FUNC_VOID(tests_strdup);
     EXEC_FUNC_VOID(tests_strcat);
-    EXEC_FUNC_VOID(tests_strcat);
+    EXEC_FUNC_VOID(tests_index);
     RETURN(1);
 }
 
