@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/minilibc.dir/PreProcessor/demo.c.o"
+  "CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o"
   "minilibc.pdb"
   "minilibc"
 )

@@ -1,1 +1,1 @@
-/usr/bin/cc -g   CMakeFiles/minilibc.dir/PreProcessor/demo.c.o  -o minilibc 
+/usr/bin/cc -g   CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o  -o minilibc 

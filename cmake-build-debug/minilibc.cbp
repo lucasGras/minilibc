@@ -45,8 +45,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/src"/>
-					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor"/>
-					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib"/>
+					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/cor"/>
+					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/prep_lib"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include"/>
@@ -66,8 +66,8 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/src"/>
-					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor"/>
-					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib"/>
+					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/cor"/>
+					<Add directory="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/prep_lib"/>
 					<Add directory="/usr/lib/gcc/x86_64-redhat-linux/7/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include"/>
@@ -80,22 +80,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor/functions.h">
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/cor/functions.h">
 			<Option target="minilibc"/>
 		</Unit>
-		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/cor/memory.h">
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/cor/memory.h">
 			<Option target="minilibc"/>
 		</Unit>
-		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c">
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/demo.c">
 			<Option target="minilibc"/>
 		</Unit>
-		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib/libstring.h">
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/prep_lib/libstring.h">
 			<Option target="minilibc"/>
 		</Unit>
-		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib/libstring_print.h">
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/prep_lib/libstring_print.h">
 			<Option target="minilibc"/>
 		</Unit>
-		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/lib/libstring_utils.h">
+		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/prep_lib/libstring_utils.h">
 			<Option target="minilibc"/>
 		</Unit>
 		<Unit filename="/home/lucasg/CLionProjects/minilibc/PreProcessor/src/preproc_minilib.h">

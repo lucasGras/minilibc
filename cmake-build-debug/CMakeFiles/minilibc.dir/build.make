@@ -57,38 +57,38 @@ include CMakeFiles/minilibc.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/minilibc.dir/flags.make
 
-CMakeFiles/minilibc.dir/PreProcessor/demo.c.o: CMakeFiles/minilibc.dir/flags.make
-CMakeFiles/minilibc.dir/PreProcessor/demo.c.o: ../PreProcessor/demo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minilibc.dir/PreProcessor/demo.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minilibc.dir/PreProcessor/demo.c.o   -c /home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c
+CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o: CMakeFiles/minilibc.dir/flags.make
+CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o: ../PreProcessor/src/demo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o   -c /home/lucasg/CLionProjects/minilibc/PreProcessor/src/demo.c
 
-CMakeFiles/minilibc.dir/PreProcessor/demo.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minilibc.dir/PreProcessor/demo.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c > CMakeFiles/minilibc.dir/PreProcessor/demo.c.i
+CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/lucasg/CLionProjects/minilibc/PreProcessor/src/demo.c > CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.i
 
-CMakeFiles/minilibc.dir/PreProcessor/demo.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minilibc.dir/PreProcessor/demo.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c -o CMakeFiles/minilibc.dir/PreProcessor/demo.c.s
+CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/lucasg/CLionProjects/minilibc/PreProcessor/src/demo.c -o CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.s
 
-CMakeFiles/minilibc.dir/PreProcessor/demo.c.o.requires:
+CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o.requires:
 
-.PHONY : CMakeFiles/minilibc.dir/PreProcessor/demo.c.o.requires
+.PHONY : CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o.requires
 
-CMakeFiles/minilibc.dir/PreProcessor/demo.c.o.provides: CMakeFiles/minilibc.dir/PreProcessor/demo.c.o.requires
-	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/PreProcessor/demo.c.o.provides.build
-.PHONY : CMakeFiles/minilibc.dir/PreProcessor/demo.c.o.provides
+CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o.provides: CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o.requires
+	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o.provides.build
+.PHONY : CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o.provides
 
-CMakeFiles/minilibc.dir/PreProcessor/demo.c.o.provides.build: CMakeFiles/minilibc.dir/PreProcessor/demo.c.o
+CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o.provides.build: CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o
 
 
 # Object files for target minilibc
 minilibc_OBJECTS = \
-"CMakeFiles/minilibc.dir/PreProcessor/demo.c.o"
+"CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o"
 
 # External object files for target minilibc
 minilibc_EXTERNAL_OBJECTS =
 
-minilibc: CMakeFiles/minilibc.dir/PreProcessor/demo.c.o
+minilibc: CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o
 minilibc: CMakeFiles/minilibc.dir/build.make
 minilibc: CMakeFiles/minilibc.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lucasg/CLionProjects/minilibc/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable minilibc"
@@ -99,7 +99,7 @@ CMakeFiles/minilibc.dir/build: minilibc
 
 .PHONY : CMakeFiles/minilibc.dir/build
 
-CMakeFiles/minilibc.dir/requires: CMakeFiles/minilibc.dir/PreProcessor/demo.c.o.requires
+CMakeFiles/minilibc.dir/requires: CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o.requires
 
 .PHONY : CMakeFiles/minilibc.dir/requires
 

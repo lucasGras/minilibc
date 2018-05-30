@@ -123,32 +123,32 @@ minilibc/fast:
 	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/build
 .PHONY : minilibc/fast
 
-PreProcessor/demo.o: PreProcessor/demo.c.o
+PreProcessor/src/demo.o: PreProcessor/src/demo.c.o
 
-.PHONY : PreProcessor/demo.o
+.PHONY : PreProcessor/src/demo.o
 
 # target to build an object file
-PreProcessor/demo.c.o:
-	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/PreProcessor/demo.c.o
-.PHONY : PreProcessor/demo.c.o
+PreProcessor/src/demo.c.o:
+	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.o
+.PHONY : PreProcessor/src/demo.c.o
 
-PreProcessor/demo.i: PreProcessor/demo.c.i
+PreProcessor/src/demo.i: PreProcessor/src/demo.c.i
 
-.PHONY : PreProcessor/demo.i
+.PHONY : PreProcessor/src/demo.i
 
 # target to preprocess a source file
-PreProcessor/demo.c.i:
-	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/PreProcessor/demo.c.i
-.PHONY : PreProcessor/demo.c.i
+PreProcessor/src/demo.c.i:
+	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.i
+.PHONY : PreProcessor/src/demo.c.i
 
-PreProcessor/demo.s: PreProcessor/demo.c.s
+PreProcessor/src/demo.s: PreProcessor/src/demo.c.s
 
-.PHONY : PreProcessor/demo.s
+.PHONY : PreProcessor/src/demo.s
 
 # target to generate assembly for a file
-PreProcessor/demo.c.s:
-	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/PreProcessor/demo.c.s
-.PHONY : PreProcessor/demo.c.s
+PreProcessor/src/demo.c.s:
+	$(MAKE) -f CMakeFiles/minilibc.dir/build.make CMakeFiles/minilibc.dir/PreProcessor/src/demo.c.s
+.PHONY : PreProcessor/src/demo.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... minilibc"
-	@echo "... PreProcessor/demo.o"
-	@echo "... PreProcessor/demo.i"
-	@echo "... PreProcessor/demo.s"
+	@echo "... PreProcessor/src/demo.o"
+	@echo "... PreProcessor/src/demo.i"
+	@echo "... PreProcessor/src/demo.s"
 .PHONY : help
 
 
