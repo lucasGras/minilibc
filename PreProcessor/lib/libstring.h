@@ -31,26 +31,40 @@ PREPROC_FUNCTION_PRM2(char *, pp_strcpy, src, char *, dest, char *)
     RETURN(dest);
 }
 
-PREPROC_FUNCTION(char *, pp_strdup, ptr, char *)
-{
-    char    *dup = MEM_ALLOC(char, (EXEC_FUNC(pp_strlen, ptr) + 1));
+PREPROC_FUNCTION(char *, pp_strdup, ptr, char *) {
+    char *dup = MEM_ALLOC(char, (EXEC_FUNC(pp_strlen, ptr) + 1));
     MEM_PROTECT_ALLOC(dup, 84);
     dup = EXEC_FUNC_PRM2(pp_strcpy, ptr, dup);
     RETURN(dup);
 }
 
-PREPROC_FUNCTION_PRM2(char *, pp_strcat, dest, char *, src, char *)
+PREPROC_FUNCTION_PRM2(char *, pp_memstrcat, src, char *, dest, char *)
 {
-    size_t  destlen = EXEC_FUNC(pp_strlen, dest);
-    size_t  i = 0;
+    size_t	len= EXEC_FUNC(pp_strlen, dest) + EXEC_FUNC(pp_strlen, src) + 1;
+    char	*cat = MEM_ALLOC(char, len);
+    int		i = -1;
 
-    while (*src) {
-        POINT_OFFSET_PTR(dest, (destlen + i), src)
-	src++;
-	i++;
+    MEM_PROTECT_ALLOC(cat, 84)
+    if (!src) {
+        while (*dest) {
+	    ++i;
+            POINT_OFFSET_PTR(cat, i, dest)
+            dest++;
+        }
+    } else {
+	while (*src) {
+	    ++i;
+	    POINT_OFFSET_PTR(cat, i, src)
+	    src++;
+	}
+	while (*dest) {
+	    ++i;
+	    POINT_OFFSET_PTR(cat, i, dest)
+	    dest++;
+	}
     }
-    POINT_OFFSET_VAL(dest, (destlen + i), '\0')
-    RETURN(dest);
+    POINT_OFFSET_VAL(cat, ++i, '\0')
+    RETURN(cat);
 }
 
 PREPROC_FUNCTION_PRM2(char *, pp_index, ptr, char *, c, int)

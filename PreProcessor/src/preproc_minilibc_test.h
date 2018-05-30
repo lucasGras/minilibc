@@ -38,6 +38,18 @@ PREPROC_FUNCTION_VOID(void, tests_strdup)
     MEM_FREE(dup);
 }
 
+PREPROC_FUNCTION_VOID(void, tests_strcat)
+{
+    char	src[] = "This";
+    char	dest[] = " is a test";
+    printf("%s\n", EXEC_FUNC_PRM2(pp_memstrcat, src, dest));
+}
+
+PREPROC_FUNCTION_VOID(void, tests_index)
+{
+    
+}
+
 PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
 {
     write(1, TEST_USAGE, 54);
@@ -46,6 +58,8 @@ PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
     EXEC_FUNC_VOID(tests_strlen);
     EXEC_FUNC_VOID(tests_strcpy);
     EXEC_FUNC_VOID(tests_strdup);
+    EXEC_FUNC_VOID(tests_strcat);
+    EXEC_FUNC_VOID(tests_strcat);
     RETURN(1);
 }
 

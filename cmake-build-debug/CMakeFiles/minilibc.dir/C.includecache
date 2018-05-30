@@ -10,14 +10,6 @@
 
 ../PreProcessor/cor/memory.h
 
-../PreProcessor/include/preproc_minilib.h
-libstring.h
-../PreProcessor/include/libstring.h
-preproc_minilibc_test.h
-../PreProcessor/include/preproc_minilibc_test.h
-
-../PreProcessor/include/preproc_minilibc_test.h
-
 ../PreProcessor/lib/libstring.h
 unistd.h
 -
@@ -37,6 +29,14 @@ libstring_utils.h
 ../PreProcessor/lib/libstring_print.h
 
 ../PreProcessor/lib/libstring_utils.h
+
+../PreProcessor/src/preproc_minilib.h
+libstring.h
+../PreProcessor/src/libstring.h
+preproc_minilibc_test.h
+../PreProcessor/src/preproc_minilibc_test.h
+
+../PreProcessor/src/preproc_minilibc_test.h
 
 /home/lucasg/CLionProjects/minilibc/PreProcessor/demo.c
 preproc_minilib.h
