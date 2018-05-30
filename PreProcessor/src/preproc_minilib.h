@@ -10,7 +10,7 @@
 
 PREPROC_MAIN(int, main)
 {
-    RETURN(EXEC_FUNC_PRM2(tests, ac, av));
+    return (EXEC_FUNC_PRM2(tests, ac, av));
 }
 
 #endif //MINILIBC_PREPROC_MINILIB_H

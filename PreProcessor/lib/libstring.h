@@ -16,7 +16,7 @@ PREPROC_FUNCTION(size_t, pp_strlen, str, char *)
     char    *ptr = str;
     while (*str)
     	str++;
-    RETURN(str - ptr);
+    return (str - ptr);
 }
 
 PREPROC_FUNCTION_PRM2(char *, pp_strcpy, src, char *, dest, char *)
@@ -28,14 +28,14 @@ PREPROC_FUNCTION_PRM2(char *, pp_strcpy, src, char *, dest, char *)
 	i++;
     }
     POINT_OFFSET_VAL(dest, i, '\0')
-    RETURN(dest);
+    return (dest);
 }
 
 PREPROC_FUNCTION(char *, pp_strdup, ptr, char *) {
     char *dup = MEM_ALLOC(char, (EXEC_FUNC(pp_strlen, ptr) + 1));
-    MEM_PROTECT_ALLOC(dup, 84);
+    MEM_PROTECT_ALLOC(dup, CRITICAL);
     dup = EXEC_FUNC_PRM2(pp_strcpy, ptr, dup);
-    RETURN(dup);
+    return (dup);
 }
 
 PREPROC_FUNCTION_PRM2(char *, pp_memstrcat, src, char *, dest, char *)
@@ -44,7 +44,7 @@ PREPROC_FUNCTION_PRM2(char *, pp_memstrcat, src, char *, dest, char *)
     char	*cat = MEM_ALLOC(char, len);
     int		i = -1;
 
-    MEM_PROTECT_ALLOC(cat, 84)
+    MEM_PROTECT_ALLOC(cat, CRITICAL)
     if (!src) {
         while (*dest) {
 	    ++i;
@@ -64,33 +64,33 @@ PREPROC_FUNCTION_PRM2(char *, pp_memstrcat, src, char *, dest, char *)
 	}
     }
     POINT_OFFSET_VAL(cat, ++i, '\0')
-    RETURN(cat);
+    return (cat);
 }
 
 PREPROC_FUNCTION_PRM2(char *, pp_index, ptr, char *, c, int)
 {
     while (*ptr) {
 	if (*ptr == (char)c)
-	    RETURN(ptr);
+	    return (ptr);
 	ptr++;
     }
-    RETURN(NULL);
+    return (NULL);
 }
 
 PREPROC_FUNCTION_PRM2(int, pp_strcmp, str, char *, str1, char *)
 {
     if (!str || !str1)
-	RETURN(-1);
+	return (-1);
     while (*str == *str1) {
         if (!(*str) || !(*str1))
 	    break;
 	str++;
 	str1++;
     }
-    RETURN((!(*str) && !(*str1)) ? 0 : 1);
+    return  (!(*str) && !(*str1)) ? 0 : 1;
 }
 
-PREPROC_FUNCTION(char *, pp_revstr, str, char *)
+PREPROC_FUNCTION(char *, pp_revstr, str, char *) //TODO mem to fix
 {
     char	*rev = MEM_ALLOC(char, EXEC_FUNC(pp_strlen, str) + 1);
     size_t	i = EXEC_FUNC(pp_strlen, str) - 1;
@@ -98,13 +98,10 @@ PREPROC_FUNCTION(char *, pp_revstr, str, char *)
 
     for (; i >= 0 ; i--) {
 	rev[offset] = str[i];
-	printf("%c\n", rev[offset]);
 	offset++;
     }
     rev[offset] = '\0';
-    printf("%s\n", rev);
-    printf("return\n");
-    RETURN(rev);
+    return (rev);
 }
 
 PREPROC_FUNCTION(int, pp_strtok, str, char *)

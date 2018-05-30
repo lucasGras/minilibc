@@ -80,13 +80,13 @@ PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
     EXEC_FUNC_VOID(tests_strcat);
     EXEC_FUNC_VOID(tests_index);
     EXEC_FUNC_VOID(tests_strcmp);
-    EXEC_FUNC_VOID(tests_revstr);
-    RETURN(1);
+    //EXEC_FUNC_VOID(tests_revstr);
+    return (1);
 }
 
 PREPROC_FUNCTION_PRM2(int, tests, ac, int, av, char **)
 {
-    RETURN((ac == 2) ? EXEC_FUNC_VOID(__exec_all_tests__) : 0);
+    return ((ac == 2) ? EXEC_FUNC_VOID(__exec_all_tests__) : 0);
 }
 
 #endif //MINILIBC_PREPROC_MINILIBC_TEST_H

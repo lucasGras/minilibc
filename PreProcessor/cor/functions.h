@@ -15,11 +15,9 @@
 				 type MAIN_PREFIX##name(prmtype prm, prmtype1 prm1)
 
 /* EXECUTION */
-#define RETURN(r) return(r)
-
 #define EXEC_FUNC_VOID(name) MAIN_PREFIX##name()
 #define EXEC_FUNC(name, _v1) MAIN_PREFIX##name(_v1)
 #define EXEC_FUNC_PRM2(name, _v1, _v2) MAIN_PREFIX##name(_v1, _v2)
-#define EXEC_SYS(f_ret, critical) if ((f_ret) == (critical)) {RETURN(-1);};
+#define EXEC_SYS(f_ret, critical) if ((f_ret) == (critical)) {return (-1);};
 
 #endif //UNTITLED1_FUNCTIONS_H

@@ -10,7 +10,7 @@ PREPROC_FUNCTION(int, pp_atoi, str, char *)
     int get = 0;
     int neg = 0;
     if (!str || (*str == '0' && EXEC_FUNC(pp_strlen, str) == 1))
-	RETURN(0);
+	return (0);
     if (*str == '-') {
 	str++;
 	neg = 1;
@@ -24,7 +24,7 @@ PREPROC_FUNCTION(int, pp_atoi, str, char *)
     }
     if (neg == 1)
 	get *= -1;
-    RETURN(get);
+    return (get);
 }
 
 PREPROC_FUNCTION(int, pp_digitlen, nb, int)
@@ -34,7 +34,7 @@ PREPROC_FUNCTION(int, pp_digitlen, nb, int)
         nb /= 10;
         i++;
     }
-    RETURN(++i);
+    return ++i;
 }
 
 PREPROC_FUNCTION(char *, pp_int_to_str, nb, int)
@@ -55,7 +55,7 @@ PREPROC_FUNCTION(char *, pp_int_to_str, nb, int)
     }
     *str = '\0';
     str = EXEC_FUNC(pp_revstr, str);
-    RETURN(str);
+    return str;
 }
 
 #endif //MINILIBC_LIBSTRING_UTILS_H
