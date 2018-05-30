@@ -1,5 +1,5 @@
 # minilibc
-
+[![Build Status](https://travis-ci.org/lucasGras/minilibc.svg?branch=master)](https://travis-ci.org/lucasGras/minilibc)
 # Preprocessor minilibc:
 
 
