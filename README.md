@@ -2,9 +2,14 @@
 [![Build Status](https://travis-ci.org/lucasGras/minilibc.svg?branch=master)](https://travis-ci.org/lucasGras/minilibc)
 ###Usage:
 To simply run minilibc tester:
-- `./`
-- `mkdir build ; cd build ; cmake .. ; make`
-- `./minilibc -tester`
+
+`./run_tests.sh`
+
+To compile manualy and run 
+
+`mkdir build ; cd build ; cmake .. ; make`
+
+`cd Preprocessor/tests ; ./tester.sh`
 ### Preprocessor minilibc:
 
 
