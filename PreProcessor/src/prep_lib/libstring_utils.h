@@ -40,7 +40,6 @@ PREPROC_FUNCTION(int, pp_digitlen, nb, int)
 PREPROC_FUNCTION(char *, pp_int_to_str, nb, int)
 {
     char *str = MEM_ALLOC(char, (EXEC_FUNC(pp_digitlen, nb) + 1));
-    char *ptr = NULL;
     int  i = 0;
     MEM_PROTECT_ALLOC(str, 84)
     if (nb < 0)
