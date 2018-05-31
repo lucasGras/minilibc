@@ -54,7 +54,7 @@ PREPROC_FUNCTION(char *, pp_int_to_str, nb, int)
     	str++;
     }
     *str = '\0';
-    str = EXEC_FUNC(pp_revstr, str);
+    str = EXEC_FUNC(pp_memrevstr, str);
     return str;
 }
 

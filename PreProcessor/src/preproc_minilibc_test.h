@@ -66,8 +66,9 @@ PREPROC_FUNCTION_VOID(void, tests_strcmp)
 
 PREPROC_FUNCTION_VOID(void, tests_revstr)
 {
-    char    *rev = EXEC_FUNC(pp_revstr, "This is a test");
+    char    *rev = EXEC_FUNC(pp_memrevstr, "This is a test");
     printf("%s\n", rev);
+    MEM_FREE(rev);
 }
 
 PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
@@ -81,7 +82,7 @@ PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
     EXEC_FUNC_VOID(tests_strcat);
     EXEC_FUNC_VOID(tests_index);
     EXEC_FUNC_VOID(tests_strcmp);
-    //EXEC_FUNC_VOID(tests_revstr);
+    EXEC_FUNC_VOID(tests_revstr);
     return (1);
 }
 
