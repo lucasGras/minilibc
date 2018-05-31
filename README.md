@@ -1,6 +1,7 @@
 # minilibc
 [![Build Status](https://travis-ci.org/lucasGras/minilibc.svg?branch=master)](https://travis-ci.org/lucasGras/minilibc)
-### Usage:
+### Preprocessor minilibc:
+#### Usage:
 To simply run minilibc tester:
 
 `./run_tests.sh`
@@ -10,7 +11,6 @@ To compile manualy and run
 `mkdir build ; cd build ; cmake .. ; make`
 
 `cd Preprocessor/tests ; ./tester.sh`
-### Preprocessor minilibc:
 
 
 
@@ -29,3 +29,5 @@ To compile manualy and run
 - `int      pp_digitlen(int)`
 - `char     *pp_int_to_str(int)`
 - `char     *pp_index(char *, int)`
+
+### Assembly minilibc:
