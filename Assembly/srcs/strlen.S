@@ -9,7 +9,7 @@ loop:
     jz      return
     inc     rax
     inc     rdi
-    jmp     asm_strlen
+    jmp     loop
 
 return:
     ret
