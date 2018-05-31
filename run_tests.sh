@@ -29,7 +29,11 @@ function _compile()
     fi;
     mkdir ${BUILD_DIR} && checkSuccess
     cd ${BUILD_DIR} && checkSuccess
-    cmake .. && make && checkSuccess
+    if  cmake .. && make ; then
+           echo "[run_tests.sh]Compilation OK"
+        else
+           echo -ne "[run_tests.sh]Compilation KO->\033[31mSTOP\033[m\n" && exit ${EXIT_FAILURE}
+    fi;
     cd .. && checkSuccess
 }
 

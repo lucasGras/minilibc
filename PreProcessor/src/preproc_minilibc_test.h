@@ -44,8 +44,9 @@ PREPROC_FUNCTION_VOID(void, tests_strcat)
 {
     char	src[] = "This";
     char	dest[] = " is a test";
-    printf("%s\n", EXEC_FUNC_PRM2(pp_memstrcat, src, dest));
-    //TODO free strcat
+    char	*cat = EXEC_FUNC_PRM2(pp_memstrcat, src, dest);
+    printf("%s\n", cat);
+    MEM_FREE(cat);
 }
 
 PREPROC_FUNCTION_VOID(void, tests_index)

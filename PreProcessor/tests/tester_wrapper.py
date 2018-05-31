@@ -9,7 +9,7 @@ def wrapper(stream, m_Tester):
     flist = m_Tester.GetFuncList()
     for line in stream:
         m_Tester.SetStream(line)
-        print("Test running: " + flist[inc] + " ", end="")
+        print("-- Test running: " + flist[inc] + " ", end="")
         m_Tester.DoTest(list[inc])
         inc += 1
 
