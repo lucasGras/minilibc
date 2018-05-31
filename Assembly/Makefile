@@ -11,7 +11,7 @@ all:
 	gcc -o $(NAME) asm_tester.c srcs/*.o
 
 clean:
-	$(RM) *.o
+	$(RM) srcs/*.o
 
 fclean: clean
 	$(RM) $(NAME)
