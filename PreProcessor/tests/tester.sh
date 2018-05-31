@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PYWRAPPER="tester_wrapper.py"
-LIB_OUT="tester_out"
+LIB_OUT=".tester_out"
 EXIT_STATUS=0
 
 function python_UT()
@@ -19,6 +19,7 @@ function python_UT()
     echo -ne "[run_tests.sh]Exec Python\n"
     python3 ${PYWRAPPER} ${LIB_OUT}
     echo -ne "[run_tests.sh]Clean tests\n"
+    rm -f minilibc
 }
 
 function check_input()
