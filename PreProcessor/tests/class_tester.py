@@ -10,12 +10,13 @@ class Tester(object):
 
     def GetListDebug(self):
         list = ["t\n", "This is a test\n", "strlen=12\n", "strcpy=test strcpy\n",
-                "is_duped\n", "This is a test\n", "a test\n", "0 1\n", "tset a si sihT\n"]
+                "is_duped\n", "This is a test\n", "a test\n", "0 1\n", "tset a si sihT\n",
+                "42 -42 0\n", "42 0\n", "4 0 2\n"]
         return list
 
     def GetFuncList(self):
         list = ["putc", "putstr", "strlen", "strcpy", "strdup", "memstrcat", "index",
-                "strcmp", "memrevstr"]
+                "strcmp", "memrevstr", "atoi", "int_to_str", "digitlen"]
         return list
 
     def SetStream(self, _in):

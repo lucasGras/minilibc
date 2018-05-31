@@ -34,26 +34,27 @@ PREPROC_FUNCTION(int, pp_digitlen, nb, int)
         nb /= 10;
         i++;
     }
-    return ++i;
+    return i;
 }
 
 PREPROC_FUNCTION(char *, pp_int_to_str, nb, int)
 {
     char *str = MEM_ALLOC(char, (EXEC_FUNC(pp_digitlen, nb) + 1));
+    char *ptr = NULL;
     int  i = 0;
     MEM_PROTECT_ALLOC(str, 84)
     if (nb < 0)
         nb *= -1;
     if (nb == 0) {
 	POINT_OFFSET_VAL(str, i, '0');
-	str++;
+	i++;
     }
     while (nb != 0) {
-        *str = (char) ((nb % 10) + '0');
+        POINT_OFFSET_VAL(str, i, (char) ((nb % 10) + '0'))
         nb /= 10;
-    	str++;
+        i++;
     }
-    *str = '\0';
+    POINT_OFFSET_VAL(str, i, '\0')
     str = EXEC_FUNC(pp_memrevstr, str);
     return str;
 }

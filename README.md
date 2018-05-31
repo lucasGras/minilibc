@@ -24,6 +24,7 @@ To compile manualy and run
 - `char     *pp_strdup(char *ptr)`
 - `char     *pp_memstrcat(char *src, char *dest)`
 - `int      pp_strcmp(char *str, char *str1)`
+- `char     *memrevstr(char *)`
 - `int      pp_atoi(char *str)`
 - `int      pp_digitlen(int)`
 - `char     *pp_int_to_str(int)`

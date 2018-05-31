@@ -90,7 +90,7 @@ PREPROC_FUNCTION_PRM2(int, pp_strcmp, str, char *, str1, char *)
     return  (!(*str) && !(*str1)) ? 0 : 1;
 }
 
-PREPROC_FUNCTION(char *, pp_memrevstr, str, char *) //TODO mem to fix
+PREPROC_FUNCTION(char *, pp_memrevstr, str, char *)
 {
     char	*rev = MEM_ALLOC(char, EXEC_FUNC(pp_strlen, str) + 1);
     int		i = (int)EXEC_FUNC(pp_strlen, str) - 1;

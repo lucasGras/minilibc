@@ -71,6 +71,30 @@ PREPROC_FUNCTION_VOID(void, tests_revstr)
     MEM_FREE(rev);
 }
 
+PREPROC_FUNCTION_VOID(void, tests_atoi)
+{
+    int	dig = EXEC_FUNC(pp_atoi, "42");
+    int	dig1 = EXEC_FUNC(pp_atoi, "-42");
+    int	dig2 = EXEC_FUNC(pp_atoi, "0");
+    printf("%d %d %d\n", dig, dig1, dig2);
+}
+
+PREPROC_FUNCTION_VOID(void, tests_int_to_str)
+{
+    char *str = EXEC_FUNC(pp_int_to_str, 42);
+    char *str1 = EXEC_FUNC(pp_int_to_str, 0);
+    printf("%s %s\n", str, str1);
+}
+
+PREPROC_FUNCTION_VOID(void, tests_digitlen)
+{
+    int len = EXEC_FUNC(pp_digitlen, 1234);
+    int len1 = EXEC_FUNC(pp_digitlen, 0);
+    int len2 = EXEC_FUNC(pp_digitlen, -14);
+
+    printf("%d %d %d\n", len, len1, len2);
+}
+
 PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
 {
     write(1, TEST_USAGE, 54);
@@ -83,10 +107,13 @@ PREPROC_FUNCTION_VOID(int, __exec_all_tests__)
     EXEC_FUNC_VOID(tests_index);
     EXEC_FUNC_VOID(tests_strcmp);
     EXEC_FUNC_VOID(tests_revstr);
+    EXEC_FUNC_VOID(tests_atoi);
+    EXEC_FUNC_VOID(tests_int_to_str);
+    EXEC_FUNC_VOID(tests_digitlen);
     return (1);
 }
 
-PREPROC_FUNCTION_PRM2(int, tests, ac, int, av, char **)
+PREPROC_FUNCTION_PRM2(int, tests, ac, int, av, char **) //TODO check tester in python input
 {
     return ((ac == 2) ? EXEC_FUNC_VOID(__exec_all_tests__) : 0);
 }
