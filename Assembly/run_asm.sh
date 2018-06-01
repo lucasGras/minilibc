@@ -23,6 +23,7 @@ function python_UT()
     echo -ne "[run_asm.sh]Exec binary\n"
     ./${ASM_BIN} > ${ASM_OUT}
     ##TODO Check ASM_OUT content in python (UT)
+    cat ${ASM_OUT}
 }
 
 function check_input()

@@ -8,7 +8,9 @@ NAME	=	asm
 
 all:
 	$(NASM) srcs/strlen.S
-	gcc -o $(NAME) asm_tester.c srcs/*.o
+	$(NASM) srcs/write.S
+	$(NASM) srcs/memset.S
+	gcc -g3 -o $(NAME) asm_tester.c srcs/*.o
 
 clean:
 	$(RM) srcs/*.o

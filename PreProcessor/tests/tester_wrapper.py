@@ -1,4 +1,4 @@
-# content of test_sample.py
+# content of tester_wrapper.py
 
 from sys import argv
 from class_tester import *
