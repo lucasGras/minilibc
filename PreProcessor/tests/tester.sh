@@ -3,6 +3,9 @@
 PYWRAPPER="tester_wrapper.py"
 LIB_OUT=".tester_out"
 EXIT_STATUS=0
+TESTFILE="./testsFile/"
+LISTDEBUG="./testsFile/PreProcessor_ListDebug"
+FUNCLIST="./testsFile/PreProcessor_FuncList"
 
 function python_UT()
 {
@@ -14,10 +17,15 @@ function python_UT()
 
     echo -ne "[run_tests.sh]Search binary\n"
     cp ../../cmake-build-debug/minilibc .
+    echo -ne "[run_tests.sh]Search testsFile directory\n"
+    if [ ! -d ${TESTFILE} ]; then
+	    echo -ne "[run_tests.sh]\033[31mcan't find testsFile directory\nSTOP\033[m"
+	    exit ${EXIT_STATUS}
+    fi;
     echo -ne "[run_tests.sh]Exec binary\n"
     ./minilibc run_tests > ${LIB_OUT}
     echo -ne "[run_tests.sh]Exec Python\n"
-    python3 ${PYWRAPPER} ${LIB_OUT}
+    python3 ${PYWRAPPER} ${LIB_OUT} ${LISTDEBUG} ${FUNCLIST}
     echo -ne "[run_tests.sh]Clean tests\n"
     rm -f minilibc
 }
