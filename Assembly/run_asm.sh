@@ -5,7 +5,7 @@ EXIT_STATUS=0
 ASM_BIN="asm"
 ASM_OUT=".asm_out"
 
-function python_UT()
+function python_UT
 {
     if [ -f ${ASM_OUT} ]; then
         echo -ne "[run_asm.sh]\033[31masm_out already exists\033[m\
@@ -26,7 +26,7 @@ function python_UT()
     cat ${ASM_OUT}
 }
 
-function check_input()
+function check_input
 {
     echo -ne "Enter:\n-- 0: Exec python unit tests\n-- 1: Quit\n"
     read input
@@ -40,7 +40,7 @@ function check_input()
     fi;
 }
 
-function _compile()
+function _compile
 {
     make re
     if [ $? -ne 0 ]; then
@@ -49,7 +49,7 @@ function _compile()
     fi;
 }
 
-function run_asm()
+function run_asm
 {
     _compile
     check_input

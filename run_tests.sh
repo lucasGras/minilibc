@@ -5,7 +5,9 @@ TESTER_SCRIPT="tester.sh"
 EXIT_SUCCESS=0
 EXIT_FAILURE=84
 
-function checkSuccess()
+ASCII="tests/.TUascii"
+
+function checkSuccess
 {
     if [ $? -ne 0 ]; then
         echo -ne "\033[31mPrevious command failed\033[m"
@@ -13,14 +15,14 @@ function checkSuccess()
     fi;
 }
 
-function _info()
+function _info
 {
     echo "[run_tests.sh]-----Infos-----"
     echo "[run_tests.sh]Language: C ; OS: Linux"
     echo -ne "[run_tests.sh]\033[32mPreparing compilation\033[m\n"
 }
 
-function _compile()
+function _compile
 {
     if [ -d ${BUILD_DIR} ]; then
         echo -ne "[run_tests.sh]\033[31mBuild directory already exists\033[m\
@@ -37,9 +39,9 @@ function _compile()
     cd .. && checkSuccess
 }
 
-function _tester_()
+function _tester_
 {
-    cd PreProcessor/tests/ && checkSuccess
+    cd tests/&& checkSuccess
     if [ -f ${TESTER_SCRIPT} ];
     then
         echo -ne "[run_tests.sh]Run tester.sh\n"
@@ -50,8 +52,9 @@ function _tester_()
     fi;
 }
 
-function run_tests()
+function run_tests
 {
+    cat ${ASCII}
     _info
     _compile
     _tester_
