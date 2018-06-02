@@ -9,22 +9,23 @@ asm_strcmp:
     push    rbp
     mov     rbp, rsp
 
-    xor     rax, rax
+    xor     rcx, rcx
 
 loop:
-    mov     rax, [rdi + rcx]
-    mov     r10, [rsi + rcx]
-    cmp     rax, 0
+    mov     al, [rdi + rcx]
+    mov     r10b, [rsi + rcx]
+    cmp     al, 0
     je      return
-    cmp     r10, 0
+    cmp     r10b, 0
     je      return
-    cmp     rax, r10
+    cmp     al, r10b
     jne     return
     inc     rcx
     jmp     loop
 
 return:
-    sub     rax, r10
+    sub     al, r10b
+    movsx   rax, al
 
     mov     rsp, rbp
     pop     rbp
