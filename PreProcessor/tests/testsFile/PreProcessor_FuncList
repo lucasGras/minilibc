@@ -1,0 +1,12 @@
+putc
+putstr
+strlen
+strcpy
+strdup
+memstrcat
+index
+strcmp
+memrevstr
+atoi
+int_to_str
+digitlen
