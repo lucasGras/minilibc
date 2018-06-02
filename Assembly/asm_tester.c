@@ -7,6 +7,7 @@
 #include <string.h>
 
 extern int asm_strlen(char *str);
+extern int asm_strnlen(char *str, size_t len);
 extern void asm_write(int fd, char *buff, size_t len);
 extern void *asm_memset(void *s, int c, size_t n);
 
@@ -15,7 +16,10 @@ int	main(int ac, char **av)
     /* strlen */
     printf("strlen; ASM:%d; SYSTEM:%d\n", asm_strlen("Test7654"), (int)strlen("Test7654"));
 
-    /* memstr */
+    /* strnlen */
+    printf("strnlen; ASM:%d; SYSTEM:%d\n", asm_strnlen("Test7654", 6), (int)strnlen("Test7654", 6));
+
+    /* memset */
     char	str[20];
     char	sys[20];
 

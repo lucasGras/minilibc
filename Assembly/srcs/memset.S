@@ -10,12 +10,12 @@ asm_memset:
     mov     rax, rdi
 
 loop:
-    cmp rcx, rdx ; check iterator vs n
-    je  return ; return if iterator == n
-    mov [rax], sil ; set rdi[] to c
-    inc rax ; rdi++
-    inc rcx ; rcx++
-    jmp loop
+    cmp rcx, rdx ;check iterator vs n
+    je  return ;return if iterator == n
+    mov [rax], sil ;set rdi[] to c
+    inc rax ;rdi++
+    inc rcx ;rcx++
+    jmp loop ;while
 
 return:
     mov     rsp, rbp
