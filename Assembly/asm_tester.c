@@ -13,10 +13,15 @@ extern void *asm_memset(void *s, int c, size_t n);
 int	main(int ac, char **av)
 {
     /* strlen */
-    printf("ASM strlen: %d; SYSTEM strlen: %d\n", asm_strlen("Test7654"), (int)strlen("Test7654"));
+    printf("strlen; ASM:%d; SYSTEM:%d\n", asm_strlen("Test7654"), (int)strlen("Test7654"));
 
     /* memstr */
     char	str[20];
-    asm_memset(str, '$', 12);
-    pritnf("")
+    char	sys[20];
+
+    strcpy(str, "This is a test");
+    strcpy(sys, "This is a test");
+    asm_memset(str, '$', 4);
+    memset(sys, '$', 4);
+    printf("memset; ASM:%s; SYSTEM:%s\n", str, sys);
 }

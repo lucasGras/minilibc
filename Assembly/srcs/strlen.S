@@ -3,6 +3,8 @@ global asm_strlen
 ;int    asm_strlen(char *str)
 
 asm_strlen:
+    push    rbp
+    mov     rbp, rsp
     xor     rax, rax ;set all bytes to 0
 
 loop:
@@ -13,4 +15,6 @@ loop:
     jmp     loop ;while
 
 return:
+    mov     rsp, rbp
+    pop     rbp
     ret
