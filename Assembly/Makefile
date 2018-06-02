@@ -12,6 +12,7 @@ all:
 	$(NASM) srcs/memset.S
 	$(NASM) srcs/strnlen.S
 	$(NASM) srcs/strcmp.S
+	$(NASM) srcs/strncmp.S
 	gcc -g3 -o $(NAME) asm_tester.c srcs/*.o
 
 clean:

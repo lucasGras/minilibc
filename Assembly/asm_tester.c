@@ -11,6 +11,7 @@ extern int	asm_strnlen(char *str, size_t len);
 extern void	asm_write(int fd, char *buff, size_t len);
 extern void	*asm_memset(void *s, int c, size_t n);
 extern int	asm_strcmp(char *s1, char *s2);
+extern int 	asm_strncmp(char *s1, char *s2, size_t n);
 
 int	main(int ac, char **av)
 {
@@ -35,6 +36,12 @@ int	main(int ac, char **av)
     char	s2[] = "Thi";
 
     printf("strcmp; ASM:%d; SYSTEM:%d\n", asm_strcmp(s1, s2), strcmp(s1, s2));
+
+    /* strncmp */
+    char	s3[] = "This is awesome";
+    char	s4[] = "This is incredible";
+
+    printf("strcmp; ASM:%d; SYSTEM:%d\n", asm_strncmp(s3, s4, 6), strncmp(s3, s4, 6));
 
     return 0;
 }
