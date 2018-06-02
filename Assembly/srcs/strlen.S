@@ -5,6 +5,7 @@ global asm_strlen
 asm_strlen:
     push    rbp
     mov     rbp, rsp
+
     xor     rax, rax ;set all bytes to 0
 
 loop:

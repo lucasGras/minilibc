@@ -6,10 +6,11 @@
 #include <stdio.h>
 #include <string.h>
 
-extern int asm_strlen(char *str);
-extern int asm_strnlen(char *str, size_t len);
-extern void asm_write(int fd, char *buff, size_t len);
-extern void *asm_memset(void *s, int c, size_t n);
+extern int	asm_strlen(char *str);
+extern int	asm_strnlen(char *str, size_t len);
+extern void	asm_write(int fd, char *buff, size_t len);
+extern void	*asm_memset(void *s, int c, size_t n);
+extern int	asm_strcmp(char *s1, char *s2);
 
 int	main(int ac, char **av)
 {
@@ -28,4 +29,12 @@ int	main(int ac, char **av)
     asm_memset(str, '$', 4);
     memset(sys, '$', 4);
     printf("memset; ASM:%s; SYSTEM:%s\n", str, sys);
+
+    /* strcmp */
+    char	s1[] = "This";
+    char	s2[] = "Thi";
+
+    printf("strcmp; ASM:%d; SYSTEM:%d\n", asm_strcmp(s1, s2), strcmp(s1, s2));
+
+    return 0;
 }
