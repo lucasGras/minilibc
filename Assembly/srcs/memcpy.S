@@ -4,7 +4,7 @@ global asm_memcpy
 ;dest=rdi
 ;src=rsi
 ;n=rdx
-; Memory ares must not overlap
+; Memory areas must not overlap
 
 asm_memcpy:
     push    rbp

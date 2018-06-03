@@ -14,6 +14,7 @@ extern int	asm_strcmp(char *s1, char *s2);
 extern int 	asm_strncmp(char *s1, char *s2, size_t n);
 extern char     *asm_strchr(char *s, int c);
 extern void	*asm_memcpy(void *dest, void *src, size_t n);
+extern void	*asm_memmove(void *dest, void *src, size_t n);
 
 int	main(int ac, char **av)
 {
@@ -40,6 +41,14 @@ int	main(int ac, char **av)
     asm_memcpy(str_cpy, "This is a test", 6);
     memcpy(sys_cpy, "This is  a test", 6);
     printf("memcpy; ASM:%s; SYSTEM:%s\n", str_cpy, sys_cpy);
+
+    /* memmove */
+    char	str_move[50] = "Warning,";
+    char	sys_move[50] = "Warning,";
+
+    asm_memmove(str_move, "This is a test", 3);
+    memmove(sys_move, "This is  a test", 3);
+    printf("memmove; ASM:%s; SYSTEM:%s\n", str_move, sys_move);
 
     /* strcmp */
     char	s1[] = "This";
