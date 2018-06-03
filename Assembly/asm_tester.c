@@ -18,6 +18,7 @@ extern void	*asm_memcpy(void *dest, void *src, size_t n);
 extern void	*asm_memmove(void *dest, void *src, size_t n);
 extern char 	*asm_rindex(char *s, int c);
 extern char 	*asm_strstr(char *haystack, char *needle);
+extern char 	*asm_strpbrk(char *s, char *accept);
 
 int	main(int ac, char **av)
 {
@@ -86,6 +87,9 @@ int	main(int ac, char **av)
     /* strstr */
     printf("strstr; ASM:%s; SYSTEM:%s\n", asm_strstr(s3, "aw"), strstr(s3, "aw"));
 
+    /* strpbrk */
+
+    printf("strpbrk; ASM:%s; SYSTEM:%s\n", asm_strpbrk(s3, "242432  azenlmk"), strpbrk(s3, "242432  azenlmk"));
 
     return 0;
 }
