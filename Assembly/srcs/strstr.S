@@ -10,11 +10,14 @@ asm_strstr:
     xor     rcx, rcx
     jmp     loop
 
+reset:
+    and     rcx, 0
+
 search:
     cmp     BYTE [rsi + rcx], 0
     je      success
     xor     r8b, r8b
-    mov     r8b, BYTE [rdi]
+    mov     r8b, BYTE [rdi + rcx]
     cmp     BYTE [rsi + rcx], r8b
     jne     sub_loop
     inc     rcx
@@ -23,8 +26,7 @@ search:
 loop:
     cmp     BYTE [rdi], 0
     je      return
-    xor     rcx, rcx
-    jmp     search
+    jmp     reset
 
 sub_loop:
     inc     rdi

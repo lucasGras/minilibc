@@ -83,8 +83,8 @@ int	main(int ac, char **av)
     /* rindex */
     printf("rindex; ASM:%s; SYSTEM:%s\n", asm_rindex(s3, 'i'), rindex(s3, 'i'));
 
-    /* rindex */
-    printf("strstr; ASM:%s; SYSTEM:%s\n", asm_strstr(s3, "we"), strstr(s3, "we"));
+    /* strstr */
+    printf("strstr; ASM:%s; SYSTEM:%s\n", asm_strstr(s3, "aw"), strstr(s3, "aw"));
 
 
     return 0;
