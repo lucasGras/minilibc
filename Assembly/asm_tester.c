@@ -20,6 +20,7 @@ extern char 	*asm_rindex(char *s, int c);
 extern char 	*asm_strstr(char *haystack, char *needle);
 extern char 	*asm_strpbrk(char *s, char *accept);
 extern size_t 	asm_strcspn(char *s, char *reject);
+extern void	*asm_memchr(void *s, int c, size_t n);
 
 int	main(int ac, char **av)
 {
@@ -61,6 +62,14 @@ int	main(int ac, char **av)
     printf("memmove; ASM:%s; SYSTEM:%s\n", str_move, sys_move);
     printf("memmove; ASM:%s; SYSTEM:GeeksGeeksfor\n", gg_testmove);
 
+    /* memchr */
+    char str[] = "http://www.tutorialspoint.com";
+    char ch = '.';
+    char *ret = asm_memchr(str, ch, strlen(str));
+    char *ret_sys = memchr(str, ch, strlen(str));
+
+    printf("memchr; ASM:%s; SYSTEM:%s\n", ret, ret_sys);
+
     /* strcmp */
     char	s1[] = "This";
     char	s2[] = "Thi";
@@ -92,7 +101,7 @@ int	main(int ac, char **av)
     printf("strpbrk; ASM:%s; SYSTEM:%s\n", asm_strpbrk(s3, "242432  azenlmk"), strpbrk(s3, "242432  azenlmk"));
 
     /* strcspn */
-    printf("strpbrk; ASM:%d; SYSTEM:%d\n", asm_strcspn("geeksforgeeks", "kfc"), strcspn("geeksforgeeks", "kfc"));
+    printf("strpcspn; ASM:%d; SYSTEM:%d\n", asm_strcspn("geeksforgeeks", "kfc"), strcspn("geeksforgeeks", "kfc"));
 
     return 0;
 }
