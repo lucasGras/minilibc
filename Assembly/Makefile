@@ -20,6 +20,7 @@ all:
 	$(NASM)	srcs/rindex.S
 	$(NASM)	srcs/strstr.S
 	$(NASM)	srcs/strpbrk.S
+	$(NASM)	srcs/strcspn.S
 	gcc -g3 -o $(NAME) asm_tester.c srcs/*.o
 
 clean:

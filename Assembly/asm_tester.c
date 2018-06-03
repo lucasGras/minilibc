@@ -19,6 +19,7 @@ extern void	*asm_memmove(void *dest, void *src, size_t n);
 extern char 	*asm_rindex(char *s, int c);
 extern char 	*asm_strstr(char *haystack, char *needle);
 extern char 	*asm_strpbrk(char *s, char *accept);
+extern size_t 	asm_strcspn(char *s, char *reject);
 
 int	main(int ac, char **av)
 {
@@ -88,8 +89,10 @@ int	main(int ac, char **av)
     printf("strstr; ASM:%s; SYSTEM:%s\n", asm_strstr(s3, "aw"), strstr(s3, "aw"));
 
     /* strpbrk */
-
     printf("strpbrk; ASM:%s; SYSTEM:%s\n", asm_strpbrk(s3, "242432  azenlmk"), strpbrk(s3, "242432  azenlmk"));
+
+    /* strcspn */
+    printf("strpbrk; ASM:%d; SYSTEM:%d\n", asm_strcspn("geeksforgeeks", "kfc"), strcspn("geeksforgeeks", "kfc"));
 
     return 0;
 }
