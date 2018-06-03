@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
+#Preprocessor Variables
 BUILD_DIR="build/"
 TESTER_SCRIPT="tester.sh"
+
+#Assembly variables
+ASM_DIR="Assembly/"
+ASM_SCRIPT="run_asm.sh"
+
+#run_tests variables
 EXIT_SUCCESS=0
 EXIT_FAILURE=84
-
 ASCII="tests/.TUascii"
 
 function checkSuccess
@@ -22,7 +28,8 @@ function _info
     echo -ne "[run_tests.sh]\033[32mPreparing compilation\033[m\n"
 }
 
-function _compile
+#PreProcessor Unit tests -------------->
+function _compile_PP
 {
     if [ -d ${BUILD_DIR} ]; then
         echo -ne "[run_tests.sh]\033[31mBuild directory already exists\033[m\
@@ -39,7 +46,7 @@ function _compile
     cd .. && checkSuccess
 }
 
-function _tester_
+function _tester_PP
 {
     cd tests/&& checkSuccess
     if [ -f ${TESTER_SCRIPT} ];
@@ -50,14 +57,36 @@ function _tester_
         echo -ne "[run_tests.sh]Can't find tester.sh\n"
         exit ${EXIT_FAILURE}
     fi;
+    cd .. && checkSuccess
 }
+#PreProcessor Unit tests <--------------
+
+
+#Assembly Unit tests -------------->
+function _call_ASM
+{
+    if [ ! -d ${ASM_DIR} ]; then
+        echo -ne "[run_tests.sh]\033[31mCan't find Assembly directory\033[m\
+                    \n[run_tests.sh]STOP\n"
+        exit ${EXIT_FAILURE}
+    fi;
+    cd  ${ASM_DIR} && checkSuccess
+    ./${ASM_SCRIPT} && checkSuccess
+    cd .. && checkSuccess
+}
+#Assembly Unit tests <--------------
 
 function run_tests
 {
     cat ${ASCII}
     _info
-    _compile
-    _tester_
+    #PP_TU ---->
+    _compile_PP
+    _tester_PP
+    #PP_TU <----
+    #ASM_TU ---->
+    _call_ASM
+    #PP_TU <----
     exit ${EXIT_SUCCESS}
 }
 

@@ -17,27 +17,13 @@ function python_UT
     if [ -f ${ASM_BIN} ]; then
             echo -ne "[run_asm.sh]Binary asm found\n"
         else
-            exit ${EXIT_STATUS}
+            exit ${EXIT_FAILURE}
     fi;
 
     echo -ne "[run_asm.sh]Exec binary\n"
     ./${ASM_BIN} > ${ASM_OUT}
     ##TODO Check ASM_OUT content in python (UT)
     cat ${ASM_OUT}
-}
-
-function check_input
-{
-    echo -ne "Enter:\n-- 0: Exec python unit tests\n-- 1: Quit\n"
-    read input
-
-    if [ ${input} -eq "0" ]; then
-        python_UT
-    elif [ ${input} -eq "1" ]; then
-        exit ${EXIT_STATUS}
-    else
-        check_input
-    fi;
 }
 
 function _compile
@@ -52,11 +38,12 @@ function _compile
 function run_asm
 {
     _compile
-    check_input
+    python_UT
     ##echo -ne "\n_____EXECUTION\n\n"
     ##./asm
     ##echo -ne "\n_____EXECUTION\n\n"
     make fclean
+    exit ${EXIT_STATUS}
 }
 
 run_asm

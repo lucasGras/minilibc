@@ -15,7 +15,8 @@ asm_memmove:
     mov     r9, rsi
     sub     r9, rdi ;rsi - rdi
     cmp     r9, 0
-    jge     __np_anyptrlt
+    jge     loop
+    jmp     __np_anyptrlt
 
 loop:
     mov     r8b, [rsi + rcx]

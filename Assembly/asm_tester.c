@@ -37,18 +37,24 @@ int	main(int ac, char **av)
     /* memcpy */
     char	str_cpy[20];
     char	sys_cpy[20];
+    char        gg_testcpy[100] = "Geeksfor";
 
     asm_memcpy(str_cpy, "This is a test", 6);
     memcpy(sys_cpy, "This is  a test", 6);
+    asm_memcpy(gg_testcpy + 5, gg_testcpy, strlen(gg_testcpy) + 1);
     printf("memcpy; ASM:%s; SYSTEM:%s\n", str_cpy, sys_cpy);
+    printf("memcpy; ASM:%s; SYSTEM:GeeksGeeksGeek\n", gg_testcpy);
 
     /* memmove */
     char	str_move[50] = "Warning,";
     char	sys_move[50] = "Warning,";
+    char        gg_testmove[100] = "Geeksfor";
 
     asm_memmove(str_move, "This is a test", 3);
     memmove(sys_move, "This is  a test", 3);
+    asm_memmove(gg_testmove + 5, gg_testmove, strlen(gg_testmove) + 1);
     printf("memmove; ASM:%s; SYSTEM:%s\n", str_move, sys_move);
+    printf("memmove; ASM:%s; SYSTEM:GeeksGeeksfor\n", gg_testmove);
 
     /* strcmp */
     char	s1[] = "This";
