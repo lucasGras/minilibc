@@ -16,6 +16,7 @@ extern int 	asm_strcasecmp(char *s1, char *s2);
 extern char     *asm_strchr(char *s, int c);
 extern void	*asm_memcpy(void *dest, void *src, size_t n);
 extern void	*asm_memmove(void *dest, void *src, size_t n);
+extern char 	*asm_rindex(char *s, int c);
 
 int	main(int ac, char **av)
 {
@@ -77,6 +78,10 @@ int	main(int ac, char **av)
 
     /* strchr */
     printf("strchr; ASM:%s; SYSTEM:%s\n", asm_strchr(s3, 'a'), strchr(s3, 'a'));
+
+    /* rindex */
+    printf("rindex; ASM:%s; SYSTEM:%s\n", asm_rindex(s3, 'i'), rindex(s3, 'i'));
+
 
     return 0;
 }
