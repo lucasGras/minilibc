@@ -14,8 +14,9 @@ all:
 	$(NASM) srcs/strcmp.S
 	$(NASM) srcs/strncmp.S
 	$(NASM) srcs/strchr.S
-	$(NASM)	srcs/memcpy.S
-	$(NASM)	srcs/memmove.S
+	$(NASM) srcs/memcpy.S
+	$(NASM) srcs/memmove.S
+	$(NASM) srcs/strcasecmp.S
 	gcc -g3 -o $(NAME) asm_tester.c srcs/*.o
 
 clean:

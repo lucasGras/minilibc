@@ -12,6 +12,7 @@ extern void	asm_write(int fd, char *buff, size_t len);
 extern void	*asm_memset(void *s, int c, size_t n);
 extern int	asm_strcmp(char *s1, char *s2);
 extern int 	asm_strncmp(char *s1, char *s2, size_t n);
+extern int 	asm_strcasecmp(char *s1, char *s2);
 extern char     *asm_strchr(char *s, int c);
 extern void	*asm_memcpy(void *dest, void *src, size_t n);
 extern void	*asm_memmove(void *dest, void *src, size_t n);
@@ -67,6 +68,12 @@ int	main(int ac, char **av)
     char	s4[] = "This is incredible";
 
     printf("strncmp; ASM:%d; SYSTEM:%d\n", asm_strncmp(s3, s4, 6), strncmp(s3, s4, 6));
+
+    /* strcasecmp */
+    char	s5[] = "This is awesome";
+    char	s6[] = "This is AWESOME";
+
+    printf("strcasecmp; ASM:%d; SYSTEM:%d\n", asm_strcasecmp(s5, s6), strcasecmp(s5, s6));
 
     /* strchr */
     printf("strchr; ASM:%s; SYSTEM:%s\n", asm_strchr(s3, 'a'), strchr(s3, 'a'));
