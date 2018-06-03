@@ -9,19 +9,19 @@ asm_strcasecmp:
     jmp     loop
 
 setcase_al:
-    cmp     al, 0x41 ; 'A'
+    cmp     al, 0x41
     jl      setcase_r10b
-    cmp     al, 0x5A ; 'Z'
+    cmp     al, 0x5A
     jg      setcase_r10b
-    add     al, 0x20 ; tolower
+    add     al, 0x20
     jmp     setcase_r10b
 
 setcase_r10b:
-    cmp     r10b, 0x41 ; 'A'
+    cmp     r10b, 0x41
     jl      compare
-    cmp     r10b, 0x5A ; 'Z'
+    cmp     r10b, 0x5A
     jg      compare
-    add     r10b, 0x20 ; tolower
+    add     r10b, 0x20
     jmp     compare
 
 loop:
