@@ -1,0 +1,13 @@
+strlen
+strnlen
+memset
+memcpy_01
+memcpy_02
+memmove_01
+memmove_02
+strcmp
+strncmp
+strcasecmp
+strchr
+rindex
+strstr

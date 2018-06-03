@@ -1,0 +1,13 @@
+strlen; ASM:8; SYSTEM:8
+strnlen; ASM:6; SYSTEM:6
+memset; ASM:$$$$ is a test; SYSTEM:$$$$ is a test
+memcpy; ASM:This i; SYSTEM:This i
+memcpy; ASM:GeeksGeeksGeek; SYSTEM:GeeksGeeksGeek
+memmove; ASM:Thining,; SYSTEM:Thining,
+memmove; ASM:GeeksGeeksfor; SYSTEM:GeeksGeeksfor
+strcmp; ASM:115; SYSTEM:115
+strncmp; ASM:0; SYSTEM:0
+strcasecmp; ASM:0; SYSTEM:0
+strchr; ASM:awesome; SYSTEM:awesome
+rindex; ASM:is awesome; SYSTEM:is awesome
+strstr; ASM:wesome; SYSTEM:wesome
