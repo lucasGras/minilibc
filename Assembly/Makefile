@@ -18,6 +18,7 @@ all:
 	$(NASM) srcs/memmove.S
 	$(NASM) srcs/strcasecmp.S
 	$(NASM)	srcs/rindex.S
+	$(NASM)	srcs/strstr.S
 	gcc -g3 -o $(NAME) asm_tester.c srcs/*.o
 
 clean:
