@@ -1,5 +1,6 @@
 section .text
 global asm_strcasecmp
+;int    asm_strcasecmp(char *s1, char *s2)
 
 asm_strcasecmp:
     push    rbp
