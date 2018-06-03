@@ -6,6 +6,7 @@ asm_strcasecmp:
     mov     rbp, rsp
 
     xor     rcx, rcx
+    jmp     loop
 
 setcase_al:
     cmp     al, 0x41 ; 'A'
