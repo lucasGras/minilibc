@@ -6,36 +6,22 @@ asm_strcasecmp:
     mov     rbp, rsp
 
     xor     rcx, rcx
-    dec     rcx
 
-setcase_rdi:
-    inc     rcx
-    cmp     BYTE [rdi + rcx], 0
-    jmp     reset_counter
-    cmp     BYTE [rdi + rcx], 0x41 ; 'A'
-    jl      setcase_rdi
-    cmp     BYTE [rdi + rcx], 0x5A ; 'Z'
-    jg      setcase_rdi
-    add     BYTE [rdi + rcx], 0x20 ; tolower
-    jmp     setcase_rdi
+setcase_al:
+    cmp     al, 0x41 ; 'A'
+    jl      setcase_r10b
+    cmp     al, 0x5A ; 'Z'
+    jg      setcase_r10b
+    add     al, 0x20 ; tolower
+    jmp     setcase_r10b
 
-reset_counter:
-    xor     rcx, rcx
-    dec     rcx
-
-setcase_rsi:
-    inc     rcx
-    cmp     BYTE [rsi + rcx], 0
-    jmp     pre_loop
-    cmp     BYTE [rsi + rcx], 0x61 ; 'a'
-    jl      setcase_rsi
-    cmp     BYTE [rsi + rcx], 0x7A ; 'z'
-    jg      setcase_rsi
-    sub     BYTE [rsi + rcx], 0x20 ; toupper
-    jmp     setcase_rsi
-
-pre_loop:
-    xor     rcx, rcx
+setcase_r10b:
+    cmp     r10b, 0x41 ; 'A'
+    jl      compare
+    cmp     r10b, 0x5A ; 'Z'
+    jg      compare
+    add     r10b, 0x20 ; tolower
+    jmp     compare
 
 loop:
     mov     al, [rdi + rcx]
@@ -44,6 +30,9 @@ loop:
     je      return
     cmp     r10b, 0
     je      return
+    jmp     setcase_al
+
+compare:
     cmp     al, r10b
     jne     return
     inc     rcx
