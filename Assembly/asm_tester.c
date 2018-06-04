@@ -21,6 +21,7 @@ extern char 	*asm_strstr(char *haystack, char *needle);
 extern char 	*asm_strpbrk(char *s, char *accept);
 extern size_t 	asm_strcspn(char *s, char *reject);
 extern void	*asm_memchr(void *s, int c, size_t n);
+extern char 	*asm_strcat(char *dest, char *src);
 
 int	main(int ac, char **av)
 {
@@ -102,6 +103,13 @@ int	main(int ac, char **av)
 
     /* strcspn */
     printf("strpcspn; ASM:%d; SYSTEM:%d\n", asm_strcspn("geeksforgeeks", "kfc"), strcspn("geeksforgeeks", "kfc"));
+
+    /* strcat */
+    char 	dest[50] = "Hey ! ";
+    char 	destsys[50] = "Hey! ";
+    char 	src[] = "This is a test";
+
+    printf("strcat; ASM:%s; SYSTEM:%s\n", asm_strcat(dest, src), strcat(destsys, src));
 
     return 0;
 }

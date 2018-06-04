@@ -22,6 +22,7 @@ all:
 	$(NASM) srcs/strpbrk.S
 	$(NASM) srcs/strcspn.S
 	$(NASM) srcs/memchr.S
+	$(NASM) srcs/strcat.S
 	gcc -g3 -o $(NAME) asm_tester.c srcs/*.o
 
 clean:
