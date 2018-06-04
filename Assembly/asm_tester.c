@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
+// ---------- string.h
 extern int	asm_strlen(char *str);
 extern int	asm_strnlen(char *str, size_t len);
 extern void	asm_write(int fd, char *buff, size_t len);
@@ -22,6 +23,9 @@ extern char 	*asm_strpbrk(char *s, char *accept);
 extern size_t 	asm_strcspn(char *s, char *reject);
 extern void	*asm_memchr(void *s, int c, size_t n);
 extern char 	*asm_strcat(char *dest, char *src);
+
+// ---------- stdio.h
+extern int      asm_putchar(char c);
 
 int	main(int ac, char **av)
 {
@@ -102,7 +106,7 @@ int	main(int ac, char **av)
     printf("strpbrk; ASM:%s; SYSTEM:%s\n", asm_strpbrk(s3, "242432  azenlmk"), strpbrk(s3, "242432  azenlmk"));
 
     /* strcspn */
-    printf("strpcspn; ASM:%d; SYSTEM:%d\n", asm_strcspn("geeksforgeeks", "kfc"), strcspn("geeksforgeeks", "kfc"));
+    printf("strcspn; ASM:%d; SYSTEM:%d\n", asm_strcspn("geeksforgeeks", "kfc"), strcspn("geeksforgeeks", "kfc"));
 
     /* strcat */
     char 	dest[50] = "Hey ! ";
@@ -110,6 +114,11 @@ int	main(int ac, char **av)
     char 	src[] = "This is a test";
 
     printf("strcat; ASM:%s; SYSTEM:%s\n", asm_strcat(dest, src), strcat(destsys, src));
+
+    /* putchar */
+    asm_putchar('a');
+    putchar('a');
+    printf("\n");
 
     return 0;
 }
