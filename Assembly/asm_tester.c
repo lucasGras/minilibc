@@ -9,7 +9,6 @@
 // ---------- string.h
 extern int	asm_strlen(char *str);
 extern int	asm_strnlen(char *str, size_t len);
-extern void	asm_write(int fd, char *buff, size_t len);
 extern void	*asm_memset(void *s, int c, size_t n);
 extern int	asm_strcmp(char *s1, char *s2);
 extern int 	asm_strncmp(char *s1, char *s2, size_t n);
@@ -25,10 +24,16 @@ extern void	*asm_memchr(void *s, int c, size_t n);
 extern char 	*asm_strcat(char *dest, char *src);
 
 // ---------- stdio.h
+extern ssize_t	asm_write(int fd, void *buff, size_t count);
 extern int      asm_putchar(char c);
 
 int	main(int ac, char **av)
 {
+    /* write */
+    char 	*write_test = strdup("This is the write test");
+    asm_write(1, write_test, strlen(write_test));
+    printf("\n");
+
     /* strlen */
     printf("strlen; ASM:%d; SYSTEM:%d\n", asm_strlen("Test7654"), (int)strlen("Test7654"));
 
@@ -117,7 +122,7 @@ int	main(int ac, char **av)
 
     /* putchar */
     asm_putchar('a');
-    putchar('a');
+    //putchar('a');
     printf("\n");
 
     return 0;

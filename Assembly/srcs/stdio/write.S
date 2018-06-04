@@ -1,7 +1,7 @@
 section .text
 global asm_write
 
-asm_putchar:
-    mov     rax, 4
+asm_write:
+    mov     rax, 1
     syscall
     ret

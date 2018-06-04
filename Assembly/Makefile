@@ -8,7 +8,7 @@ NAME	=	asm
 
 all:
 	$(NASM) srcs/string/strlen.S
-	$(NASM) srcs/write.S
+	$(NASM) srcs/stdio/write.S
 	$(NASM) srcs/string/memset.S
 	$(NASM) srcs/string/strnlen.S
 	$(NASM) srcs/string/strcmp.S
