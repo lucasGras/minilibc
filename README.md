@@ -31,3 +31,5 @@ To compile manualy and run
 - `char     *pp_index(char *, int)`
 
 ### Assembly minilibc:
+
+Syscall lists:  [Full table 64-bits](http://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)
