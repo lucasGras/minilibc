@@ -1,8 +1,8 @@
 section .text
-global asm_strcasecmp
+global strcasecmp
 ;int    asm_strcasecmp(char *s1, char *s2)
 
-asm_strcasecmp:
+strcasecmp:
     push    rbp
     mov     rbp, rsp
 

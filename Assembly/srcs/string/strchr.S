@@ -1,10 +1,10 @@
 section .text
-global asm_strchr
+global strchr
 ;char   *asm_strchr(char *s, int c)
 ;char *s = rdi
 ;int c = rsi
 
-asm_strchr:
+strchr:
     push    rbp
     mov     rbp, rsp
 
@@ -19,6 +19,9 @@ loop:
     jmp     loop
 
 failure:
+    cmp     sil, 0
+    je      success
+
     mov     rsp, rbp
     pop     rbp
     ret

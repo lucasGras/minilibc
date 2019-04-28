@@ -1,8 +1,8 @@
 section .text
-global  asm_strcat
+global  strcat
 ;char   *asm_strcat(char *dest, char *src)
 
-asm_strcat:
+strcat:
     push    rbp
     mov     rbp, rsp
 

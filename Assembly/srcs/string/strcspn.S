@@ -1,8 +1,8 @@
 section .text
-global  asm_strcspn
+global  strcspn
 ;size_t   asm_strcspn(char *s, char *reject)
 
-asm_strcspn:
+strcspn:
     push    rbp
     mov     rbp, rsp
 

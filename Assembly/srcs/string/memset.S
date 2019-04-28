@@ -1,8 +1,8 @@
 section .text
-global asm_memset
+global memset
 ; void *asm_memset(void *s, int c, size_t n)
 
-asm_memset:
+memset:
     push    rbp
     mov     rbp, rsp
 

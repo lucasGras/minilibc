@@ -1,8 +1,8 @@
 section .text
-global  asm_memchr
+global  memchr
 ;void   *asm_memchr(void *s, int c, size_t n)
 
-asm_memchr:
+memchr:
     push    rbp
     mov     rbp, rsp
 

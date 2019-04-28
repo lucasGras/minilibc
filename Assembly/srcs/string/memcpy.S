@@ -13,13 +13,13 @@ asm_memcpy:
     xor     rcx, rcx
 
 loop:
-    mov     r8b, [rsi + rcx]
-    cmp     r8b, 0
+	cmp     rcx, rdx
     je      return
-    mov     [rdi + rcx], r8b
+	cmp     BYTE [rsi + rcx], 0
+    je      return
+    mov     r8b, BYTE [rsi + rcx]
+    mov     BYTE [rdi + rcx], r8b
     inc     rcx
-    cmp     rcx, rdx
-    je      return
     jmp     loop
 
 return:

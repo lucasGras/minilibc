@@ -1,8 +1,8 @@
 section .text
-global  asm_strpbrk
+global  strpbrk
 ;char   *asm_strpbrk(char *s, char *accept)
 
-asm_strpbrk:
+strpbrk:
     push    rbp
     mov     rbp, rsp
 

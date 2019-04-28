@@ -1,35 +1,40 @@
+BITS 64
 section .text
-global asm_rindex
+global rindex
 ;char   *rindex(char *s, int c)
 
-asm_rindex:
+rindex:
     push    rbp
     mov     rbp, rsp
 
     xor     rax, rax
+    xor	    rcx, rcx
 
 goto_end_ptr:
-    cmp     BYTE [rdi], 0
+    cmp     BYTE [rdi + rcx], 0
     je      loop
-    inc     rdi
+    inc     rcx
     jmp     goto_end_ptr
 
 loop:
-    cmp     BYTE [rdi], sil
+    cmp     BYTE [rdi + rcx], sil
     je      success
-    dec     rdi
+    cmp     rcx, 0
+    je      failure
+    dec     rcx
     jmp     loop
 
 success:
     mov     rax, rdi
+    add		rax, rcx
 
     mov     rsp, rbp
     pop     rbp
     ret
 
-return:
-    mov     rax, 0
+failure:
+    mov rax, 0
 
-    mov     rsp, rbp
-    pop     rbp
+    mov    rsp, rbp
+    pop    rbp
     ret

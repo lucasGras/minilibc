@@ -1,8 +1,8 @@
 section .text
-global asm_strlen
+global strlen
 ;int    asm_strlen(char *str)
 
-asm_strlen:
+strlen:
     push    rbp
     mov     rbp, rsp
 

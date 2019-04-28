@@ -1,8 +1,8 @@
 section .text
-global asm_strcmp
+global strcmp
 ;int    asm_strcmp(char *s1, char *s2)
 
-asm_strcmp:
+strcmp:
     push    rbp
     mov     rbp, rsp
 

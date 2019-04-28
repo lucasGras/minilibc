@@ -1,8 +1,8 @@
 section .text
-global  asm_strstr
+global  strstr
 ;char   *asm_strstr(char *haystack, char *needle)
 
-asm_strstr:
+strstr:
     push    rbp
     mov     rbp, rsp
 
